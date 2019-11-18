@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<script src="https://www.gstatic.com/firebasejs/5.9.1/firebase.js"></script>
+  <head>
+	<link rel="stylesheet" type="text/css" href="stile.css"/>
+    <title>Sito prova app</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
+	<link href="https://cdn.jsdelivr.net/bootstrap.datepicker-fork/1.3.0/css/datepicker3.css" rel="stylesheet"/>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/bootstrap.datepicker-fork/1.3.0/js/bootstrap-datepicker.js"></script>
+	<script src="https://cdn.jsdelivr.net/bootstrap.datepicker-fork/1.3.0/js/locales/bootstrap-datepicker.it.js"></script>
+  </head>
+  <body>
+	<div class="header">
+		<div class="header_logo">
+			<img src="Malnate-Stemma.png">
+			<div class="header_title">
+				<h1>Servizio civile Malnate</h1>
+			</div>
+		</div>
+		<div class="header_menu">
+			<a href="https://www.comune.malnate.va.it/">Vai al comune di Malnate</a>
+		</div>
+	</div>
+	<div class="container">
+			<div id="map" ></div>
+		<div class="container_form">
+			<h2>Cerca una segnalazione</h2>
+			<div class="container_datalist">
+				<label>
+					<div>Motivo:</div>
+					<input list="myDatalist" id="myDatalist-input" class="datalist">
+				</label>
+			</div>
+			<div class="container_datepicker">
+				<label>
+					<div>Da quale data cercare:</div>
+					<input id="uno" class="datepicker" data-date-end-date="0d"/>
+				</label>
+				<label>
+					<div>Fino a quale data cercare:</div>
+					<input id="due" class="datepicker" data-date-end-date="0d"/>
+				</label>
+			</div>
+			<button onclick="FunzioneData()" id="bottone" class="base-button">CERCA</button>
+		</div>
+	</div>
+
+
+
+  <datalist id="myDatalist">
+	  <option value="TUTTI">
+	  <option value="ESCREMENTI">
+	  <option value="RANDAGIO">
+	  <option value="MALTRATTATI">
+	  <option value="PERICOLOSI">
+  </datalist>
+  
+  </body>
+  <script src="scrip.js">
+  </script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyApFGE8pjcyBoiAO_GIkLZluK9NsMu-R1w&libraries=places&callback=initMap"async defer></script>
+  <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>>
+</html>
